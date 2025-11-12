@@ -189,12 +189,12 @@ The `./dist/` folder contains all static files ready for deployment.
 
 ## 📄 License
 
-Copyright 2023 Femina Plus. All rights reserved.
+Copyright 2025 Femina Plus. All rights reserved.
 
 ## 🤝 Support
 
 For questions or support, contact:
-- Phone: +91 9876543210
+- Phone: +91 
 - Website: [Femina Plus](https://feminaplus.com)
 
 ## 📚 Learn More
