@@ -1,0 +1,94 @@
+---
+const services = [
+	{
+		name: 'Global Color',
+		icon: '👩',
+		lengths: ['Short length', 'Medium length', 'Long length']
+	},
+	{
+		name: 'Highlights Single Color',
+		icon: '💇',
+		lengths: ['Short length', 'Medium length', 'Long length']
+	},
+	{
+		name: 'Kera Smoothening',
+		icon: '✨',
+		lengths: ['Short length', 'Medium length', 'Long length']
+	},
+	{
+		name: 'Botox',
+		icon: '💉',
+		lengths: ['Short length', 'Medium length', 'Long length']
+	},
+	{
+		name: 'Keratin',
+		icon: '🌟',
+		lengths: ['Short length', 'Medium length', 'Long length']
+	},
+	{
+		name: 'Nano Plastia',
+		icon: '🔬',
+		lengths: ['Short length', 'Medium length', 'Long length']
+	}
+];
+---
+
+<section id="services" class="py-16 bg-white">
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+		<div class="grid md:grid-cols-2 gap-12 mb-12">
+			<div>
+				<h2 class="text-5xl md:text-6xl font-serif text-black mb-6">Empowering Women's Health</h2>
+			</div>
+			<div class="flex items-center">
+				<p class="text-lg text-gray-700">
+					Our expert team offers personalized care and top-quality products that meet your unique needs, ensuring you look and feel your best.
+				</p>
+			</div>
+		</div>
+
+		<!-- Service cards -->
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+			{services.map((service) => (
+				<div class="border border-gray-200 p-6 hover:shadow-lg transition relative">
+					<div class="text-4xl mb-4">{service.icon}</div>
+					<h3 class="text-xl font-semibold text-black mb-4">{service.name}</h3>
+					<ul class="space-y-2">
+						{service.lengths.map((length) => (
+							<li class="text-gray-600 flex items-center gap-2">
+								<svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+								</svg>
+								{length}
+							</li>
+						))}
+					</ul>
+					<div class="absolute bottom-4 right-4">
+						<svg class="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
+							<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+						</svg>
+					</div>
+				</div>
+			))}
+		</div>
+
+		<!-- Footer taglines -->
+		<div class="bg-black py-6">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="flex flex-wrap justify-center items-center gap-6 md:gap-12">
+					<div class="flex items-center gap-2 text-white">
+						<span class="text-yellow-500">*</span>
+						<span>Your Path to Better Health</span>
+					</div>
+					<div class="flex items-center gap-2 text-white">
+						<span class="text-yellow-500">*</span>
+						<span>Wellness for Women</span>
+					</div>
+					<div class="flex items-center gap-2 text-white">
+						<span class="text-yellow-500">*</span>
+						<span>Shaping Women's Wellness</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

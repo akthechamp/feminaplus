@@ -1,0 +1,71 @@
+---
+const solutions = [
+	{
+		title: 'K-essence Head rituals',
+		image: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&q=80'
+	},
+	{
+		title: 'Hair Treatment',
+		image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&q=80'
+	},
+	{
+		title: 'Facial Care',
+		image: 'https://images.unsplash.com/photo-1616394584738-fc6e612e785b?w=400&q=80'
+	}
+];
+---
+
+<section class="py-16 bg-black text-white">
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+		<div class="grid md:grid-cols-2 gap-12 mb-12">
+			<div>
+				<h2 class="text-5xl md:text-6xl font-serif mb-6">Next Gen Health Solutions by Femina Plus</h2>
+			</div>
+			<div class="flex items-center">
+				<p class="text-lg text-gray-300">
+					Experience cutting-edge beauty and wellness treatments designed to enhance your natural beauty and boost your confidence.
+				</p>
+			</div>
+		</div>
+
+		<!-- Carousel container -->
+		<div class="relative">
+			<div class="overflow-x-auto scrollbar-hide">
+				<div class="flex gap-6 pb-4" id="solutions-carousel">
+					{solutions.map((solution) => (
+						<div class="flex-shrink-0 w-80">
+							<div class="bg-gray-800 rounded-lg overflow-hidden">
+								<img src={solution.image} alt={solution.title} class="w-full h-64 object-cover" />
+								<div class="p-6">
+									<h3 class="text-xl font-semibold">{solution.title}</h3>
+								</div>
+							</div>
+						</div>
+					))}
+				</div>
+			</div>
+
+			<!-- Navigation arrows -->
+			<button class="absolute right-0 top-1/2 -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-full p-3 transition" onclick="document.getElementById('solutions-carousel').scrollBy({left: 300, behavior: 'smooth'})">
+				<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+				</svg>
+			</button>
+			<button class="absolute left-0 top-1/2 -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-full p-3 transition" onclick="document.getElementById('solutions-carousel').scrollBy({left: -300, behavior: 'smooth'})">
+				<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+				</svg>
+			</button>
+		</div>
+	</div>
+</section>
+
+<style>
+	.scrollbar-hide {
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+	}
+	.scrollbar-hide::-webkit-scrollbar {
+		display: none;
+	}
+</style>

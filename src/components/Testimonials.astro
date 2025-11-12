@@ -1,0 +1,73 @@
+---
+const testimonials = [
+	{
+		name: 'Shazia Khan',
+		text: 'Amazing service! The staff is professional and the results exceeded my expectations.',
+		image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80'
+	},
+	{
+		name: 'Rukhsana Ahmed',
+		text: 'Best salon experience I\'ve ever had. Highly recommend their hair treatments!',
+		image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80'
+	},
+	{
+		name: 'Ayesha Ali Khan',
+		text: 'The team made me feel so comfortable. Love my new look!',
+		image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&q=80'
+	}
+];
+---
+
+<section class="py-16 bg-gray-50">
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+		<h2 class="text-5xl md:text-6xl font-serif text-black mb-12 text-center">Our Customers Share Their Experience</h2>
+
+		<!-- Testimonials carousel -->
+		<div class="relative">
+			<div class="overflow-x-auto scrollbar-hide">
+				<div class="flex gap-6 pb-4" id="testimonials-carousel">
+					{testimonials.map((testimonial) => (
+						<div class="flex-shrink-0 w-80">
+							<div class="bg-white rounded-lg overflow-hidden shadow-lg">
+								<div class="relative">
+									<img src={testimonial.image} alt={testimonial.name} class="w-full h-64 object-cover" />
+									<button class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 hover:bg-opacity-50 transition">
+										<svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 20 20">
+											<path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l11.15-6.222a1.5 1.5 0 000-2.538L6.3 2.84z" />
+										</svg>
+									</button>
+								</div>
+								<div class="p-6">
+									<h3 class="text-xl font-semibold text-black mb-2">{testimonial.name}</h3>
+									<p class="text-gray-600">{testimonial.text}</p>
+								</div>
+							</div>
+						</div>
+					))}
+				</div>
+			</div>
+
+			<!-- Navigation arrows -->
+			<button class="absolute right-0 top-1/2 -translate-y-1/2 bg-white rounded-full p-3 shadow-lg hover:bg-gray-100 transition" onclick="document.getElementById('testimonials-carousel').scrollBy({left: 300, behavior: 'smooth'})">
+				<svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+				</svg>
+			</button>
+			<button class="absolute left-0 top-1/2 -translate-y-1/2 bg-white rounded-full p-3 shadow-lg hover:bg-gray-100 transition" onclick="document.getElementById('testimonials-carousel').scrollBy({left: -300, behavior: 'smooth'})">
+				<svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+				</svg>
+			</button>
+		</div>
+	</div>
+</section>
+
+<style>
+	.scrollbar-hide {
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+	}
+	.scrollbar-hide::-webkit-scrollbar {
+		display: none;
+	}
+</style>

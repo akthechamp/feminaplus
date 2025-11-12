@@ -1,16 +1,51 @@
 ---
-
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import EmpoweringWomen from '../components/EmpoweringWomen.astro';
+import NextGenHealth from '../components/NextGenHealth.astro';
+import Promotional from '../components/Promotional.astro';
+import BrandLogos from '../components/BrandLogos.astro';
+import Locations from '../components/Locations.astro';
+import Testimonials from '../components/Testimonials.astro';
+import BookingForm from '../components/BookingForm.astro';
+import InstagramFeed from '../components/InstagramFeed.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<meta name="description" content="Femina Plus - Expert Hair, Makeup & Nails. Your Hair | Makeup | Nails | Skin | Lashes" />
+		<title>Femina Plus - Beauty & Wellness Center</title>
 	</head>
-	<body>
-		<h1>Astro</h1>
+	<body class="antialiased">
+		<Header />
+		<main>
+			<Hero />
+			<EmpoweringWomen />
+			<NextGenHealth />
+			<Promotional />
+			<BrandLogos />
+			<Locations />
+			<Testimonials />
+			<BookingForm />
+			<InstagramFeed />
+		</main>
+		<Footer />
 	</body>
 </html>
+
+<style is:global>
+	html {
+		font-family: system-ui, sans-serif;
+		scroll-behavior: smooth;
+	}
+
+	body {
+		margin: 0;
+		padding: 0;
+	}
+</style>
