@@ -9,6 +9,8 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@fontsource/antic-didone": "^5.2.8",
+    "@fontsource/manrope": "^5.2.8",
     "astro": "^5.15.5"
   },
   "devDependencies": {

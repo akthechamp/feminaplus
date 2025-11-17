@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Antic+Didone&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Antic+Didone&family=Manrope:wght@200..800&display=swap");
+.animate-spin-ultra-slow {
+  animation: spin-super-slow 10s linear infinite;
+}
+
+@keyframes spin-super-slow {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-super-slow {
+  animation: spin-super-slow 10s linear infinite;
+}
+
+.height-add {
+  height: 20vh;
+}
