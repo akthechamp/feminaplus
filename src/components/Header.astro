@@ -1,18 +1,17 @@
 ---
-
+import arrow from "../../public/arrow-top-right.svg";
+import close from "../../public/close.svg";
+import { Image } from "astro:assets";
 ---
 
-<header class="w-full fixed top-0 left-0 z-50">
+<header class="w-full absolute top-0 left-0 z-50">
   <!-- Top bar with phone number -->
   <div class="bg-black text-white py-2 px-4">
-    <div class="max-w-7xl mx-auto flex justify-start">
-      <p class="text-sm">
-        For bookings call us: <a
-          href="tel:+919876543210"
-          class="hover:text-gray-300">+91 9876543210</a
-        >
-      </p>
-    </div>
+    <p class="text-sm text-center py-4">
+      Free mackup for first time customer. <span class="font-extrabold">
+        Use code Feminaplusfirst</span
+      >
+    </p>
   </div>
 
   <!-- Main navigation -->
@@ -31,43 +30,146 @@
         </div>
 
         <!-- Navigation links -->
-        <div class="hidden md:flex items-center space-x-8">
-          <a href="#about" class="text-white hover:text-gray-300 transition"
-            >About</a
+        <div class="hidden lg:flex items-center gap-9">
+          <a
+            href="#about"
+            class="relative text-white hover:text-gray-300 transition
+           after:content-[''] after:absolute after:left-0 after:-bottom-1
+           after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300
+           hover:after:w-full"
           >
-          <a href="#locations" class="text-white hover:text-gray-300 transition"
-            >Locations</a
+            About
+          </a>
+
+          <a
+            href="#locations"
+            class="relative text-white hover:text-gray-300 transition
+           after:content-[''] after:absolute after:left-0 after:-bottom-1
+           after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300
+           hover:after:w-full"
           >
-          <a href="#services" class="text-white hover:text-gray-300 transition"
-            >Services</a
+            Locations
+          </a>
+
+          <a
+            href="#services"
+            class="relative text-white hover:text-gray-300 transition
+           after:content-[''] after:absolute after:left-0 after:-bottom-1
+           after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300
+           hover:after:w-full"
           >
-          <a href="#blog" class="text-white hover:text-gray-300 transition"
-            >Testimonials</a>
-          <a href="#blog" class="text-white hover:text-gray-300 transition"
-            >Media</a>
+            Services
+          </a>
+
+          <a
+            href="#blog"
+            class="relative text-white hover:text-gray-300 transition
+           after:content-[''] after:absolute after:left-0 after:-bottom-1
+           after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300
+           hover:after:w-full"
+          >
+            Testimonials
+          </a>
+
+          <a
+            href="#media"
+            class="relative text-white hover:text-gray-300 transition
+           after:content-[''] after:absolute after:left-0 after:-bottom-1
+           after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300
+           hover:after:w-full"
+          >
+            Media
+          </a>
         </div>
 
+        <!-- Mobile Responsive -->
+        <div class="hidden menu-bar fixed items-center gap-9">
+          <a
+            href="#about"
+            class="relative text-white hover:text-gray-300 transition
+           after:content-[''] after:absolute after:left-0 after:-bottom-1
+           after:w-0 after:h-[2px] after:bg-black after:transition-all after:duration-300
+           hover:after:w-full"
+          >
+            About
+          </a>
+
+          <a
+            href="#locations"
+            class="relative text-white hover:text-gray-300 transition
+           after:content-[''] after:absolute after:left-0 after:-bottom-1
+           after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300
+           hover:after:w-full"
+          >
+            Locations
+          </a>
+
+          <a
+            href="#services"
+            class="relative text-white hover:text-gray-300 transition
+           after:content-[''] after:absolute after:left-0 after:-bottom-1
+           after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300
+           hover:after:w-full"
+          >
+            Services
+          </a>
+
+          <a
+            href="#blog"
+            class="relative text-white hover:text-gray-300 transition
+           after:content-[''] after:absolute after:left-0 after:-bottom-1
+           after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300
+           hover:after:w-full"
+          >
+            Testimonials
+          </a>
+
+          <a
+            href="#media"
+            class="relative text-white hover:text-gray-300 transition-colors
+         after:content-[''] after:absolute after:left-0 after:-bottom-1
+         after:h-[2px] after:bg-white after:w-0 after:transition-all after:duration-300
+         hover:after:w-full"
+          >
+            Media
+          </a>
+        </div>
         <!-- Book Appointment Button -->
         <button
-          class="bg-black text-white px-6 py-2 hover:bg-gray-800 transition"
+          class="bg-black rounded-full hidden lg:flex items-center gap-3 text-[14px] text-white
+          pl-6 pr-[6px] py-2 transition-all duration-300
+          shadow-[0_0_0px_0_white]
+          hover:shadow-[0_0_15px_3px_white]"
         >
           Book Appointment
-        </button>
+          <Image
+            class="bg-white w-fit rounded-full py-[11px] px-[21px]"
+            src={arrow}
+            alt={`${arrow}`}
+          />
 
-        <!-- Mobile menu button -->
-        <button class="md:hidden text-white">
-          <svg
-            class="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
+          <!-- Mobile menu button -->
+          <div>
+            <button class="lg:hidden menu-click text-white">
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+            <button class="hidden w-6 h-6 menu-close"
+              ><Image src={close} alt={`${close}`} /></button
+            >
+          </div>
+
+          <div></div>
         </button>
       </div>
     </div>

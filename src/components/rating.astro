@@ -1,0 +1,46 @@
+---
+import "../css/style.css";
+import start from "../../public/star.svg";
+import medal from "../../public/medal.svg";
+import cup from "../../public/cup.svg";
+import { Image } from "astro:assets";
+---
+
+<div
+  class="relative -z-10 pb-[3.232%]"
+  style="background-image: url('/golden-bar.png'); background-size: cover; background-position: center;"
+>
+  <div
+    class="absolute bottom-0 left-0 w-full pb-[66.4px] z-[9999] bg-no-repeat bg-cover"
+    style="background-image: url('/golden-bar-cut-shape.png');"
+  >
+  </div>
+
+  <div class="px-[60px] pt-[22px] pb-[19px] mb-[13px]">
+    <div class="">
+      <div class="flex flex-wrap justify-between items-center gap-8 md:gap-16">
+        <div class="flex items-center gap-2">
+          <Image src={start} alt={`${start}`} />
+          <p class="text-[22px] text-white font-manrope">
+            4.2 rating at Google
+          </p>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <Image src={medal} alt={`${medal}`} />
+          <p class="text-[22px] text-white font-manrope">
+            Award wining (Best Luxury Salon & Spa) by 92.7 Big FM
+          </p>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <Image src={cup} alt={`${cup}`} />
+          <p class="text-[22px] text-white font-manrope">
+            Since 1986 (Chandigarh)
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
