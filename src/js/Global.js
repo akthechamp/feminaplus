@@ -14,6 +14,7 @@ $(document).ready(function () {
     $("body").addClass("overflow-hidden");
     $(".menu-bar").removeClass("hidden").addClass("!flex");
   });
+  
 
   $(".menu-close").click(function () {
     $(".mobile-menu").slideUp(300);
