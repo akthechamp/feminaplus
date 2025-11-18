@@ -16,26 +16,32 @@ import { Image } from "astro:assets";
   >
   </div>
 
-  <div class="px-[60px] pt-[22px] pb-[19px] mb-[13px]">
+  <div class="px-[60px] pt-[22px] pb-[19px] mb-[55px] lg:mb-[13px]">
     <div class="">
-      <div class="flex flex-wrap justify-between items-center gap-8 md:gap-16">
+      <div class="flex flex-wrap justify-between items-center gap-8 lg:gap-16">
         <div class="flex items-center gap-2">
           <Image src={start} alt={`${start}`} />
-          <p class="text-[22px] text-white font-manrope">
+          <p
+            class="text-[12px] md:text-[15px] lg:text-[22px] text-white font-manrope"
+          >
             4.2 rating at Google
           </p>
         </div>
 
         <div class="flex items-center gap-2">
           <Image src={medal} alt={`${medal}`} />
-          <p class="text-[22px] text-white font-manrope">
+          <p
+            class="text-[12px] md:text-[15px] lg:text-[22px] text-white font-manrope"
+          >
             Award wining (Best Luxury Salon & Spa) by 92.7 Big FM
           </p>
         </div>
 
         <div class="flex items-center gap-2">
           <Image src={cup} alt={`${cup}`} />
-          <p class="text-[22px] text-white font-manrope">
+          <p
+            class="text-[12px] md:text-[15px] lg:text-[22px] text-white font-manrope"
+          >
             Since 1986 (Chandigarh)
           </p>
         </div>
@@ -43,4 +49,3 @@ import { Image } from "astro:assets";
     </div>
   </div>
 </div>
-

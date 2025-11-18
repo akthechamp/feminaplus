@@ -11,7 +11,8 @@
   "dependencies": {
     "@fontsource/antic-didone": "^5.2.8",
     "@fontsource/manrope": "^5.2.8",
-    "astro": "^5.15.5"
+    "astro": "^5.15.5",
+    "jquery": "^3.7.1"
   },
   "devDependencies": {
     "@astrojs/tailwind": "^5.1.5",

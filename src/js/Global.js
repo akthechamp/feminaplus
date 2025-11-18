@@ -7,14 +7,15 @@ $(document).ready(function () {
     $(this).hide();
     $(".menu-close").show();
 
-    $("header").addClass("bg-white text-black h-20vh height-add");
+    $("header").addClass("bg-white text-black h-40vh height-add");
     $("header a, header p, header button")
       .addClass("h-20vh")
       .removeClass("text-white");
     $("body").addClass("overflow-hidden");
+    $(".book-btn").hide();
+    $(".main-navbar").hide();
     $(".menu-bar").removeClass("hidden").addClass("!flex");
   });
-  
 
   $(".menu-close").click(function () {
     $(".mobile-menu").slideUp(300);

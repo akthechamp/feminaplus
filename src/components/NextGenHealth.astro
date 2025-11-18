@@ -1,71 +1,156 @@
 ---
+import demandingIcon from "../../public/demanding_icon.svg";
+
 const solutions = [
-	{
-		title: 'K-essence Head rituals',
-		image: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&q=80'
-	},
-	{
-		title: 'Hair Treatment',
-		image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&q=80'
-	},
-	{
-		title: 'Facial Care',
-		image: 'https://images.unsplash.com/photo-1616394584738-fc6e612e785b?w=400&q=80'
-	}
+  {
+    title: "K-essence Head rituals",
+    image:
+      "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&q=80",
+  },
+  {
+    title: "Hair Treatment",
+    image:
+      "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&q=80",
+  },
+  {
+    title: "Facial Care",
+    image:
+      "https://images.unsplash.com/photo-1616394584738-fc6e612e785b?w=400&q=80",
+  },
 ];
+import { Image } from "astro:assets";
+import two from "../../public/slider-image-two.png";
+import three from "../../public/slider-image-three.png";
+import one from "../../public/slider-image-one.png";
+import four from "../../public/slider-image-four.png";
 ---
 
 <section class="py-16 bg-black text-white">
-	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-		<div class="grid md:grid-cols-2 gap-12 mb-12">
-			<div>
-				<h2 class="text-5xl md:text-6xl font-serif mb-6">Next Gen Health Solutions by Femina Plus</h2>
-			</div>
-			<div class="flex items-center">
-				<p class="text-lg text-gray-300">
-					Experience cutting-edge beauty and wellness treatments designed to enhance your natural beauty and boost your confidence.
-				</p>
-			</div>
-		</div>
-
-		<!-- Carousel container -->
-		<div class="relative">
-			<div class="overflow-x-auto scrollbar-hide">
-				<div class="flex gap-6 pb-4" id="solutions-carousel">
-					{solutions.map((solution) => (
-						<div class="flex-shrink-0 w-80">
-							<div class="bg-gray-800 rounded-lg overflow-hidden">
-								<img src={solution.image} alt={solution.title} class="w-full h-64 object-cover" />
-								<div class="p-6">
-									<h3 class="text-xl font-semibold">{solution.title}</h3>
-								</div>
-							</div>
-						</div>
-					))}
-				</div>
-			</div>
-
-			<!-- Navigation arrows -->
-			<button class="absolute right-0 top-1/2 -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-full p-3 transition" onclick="document.getElementById('solutions-carousel').scrollBy({left: 300, behavior: 'smooth'})">
-				<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-				</svg>
-			</button>
-			<button class="absolute left-0 top-1/2 -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-full p-3 transition" onclick="document.getElementById('solutions-carousel').scrollBy({left: -300, behavior: 'smooth'})">
-				<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-				</svg>
-			</button>
-		</div>
-	</div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div
+      class="relative md:grid md:grid-cols-10 gap-12 mb-12"
+      style="background-image: url('/gen-health-bg.svg');opacity:70%;"
+    >
+      <div class="md:col-span-7">
+        <div class="flex gap-[17px] items-center mb-[20px]">
+          <div class="h-[10px] w-[33px] rounded-full bg-white"></div>
+          <p>Our services</p>
+        </div>
+        <h2
+          class="text-[50px] md:text-[54px] leading-[64px] font-anticdidone mb-6"
+        >
+          Next Gen Health <br /> Solutions by Femina Plus
+        </h2>
+      </div>
+      <div class="flex items-center col-span-3">
+        <p class="text-[18px] font-manrope text-gray-300">
+          Look effortlessly radiant with easy to apply products that save time
+          and feel like you
+        </p>
+      </div>
+    </div>
+    <div class="slider">
+      <div class="relative slide-item">
+        <div
+          class="flex absolute top-[21px] left-[30px] md:left-[20px] lg:left-[26px] gap-[10px] w-fit transition-all duration-300 shadow-[0_0_0px_0_white] hover:shadow-[0_0_15px_3px_white] rounded-full mb-6 p-[10px] group-hover:border-none border-[#D9D9D9] border bg-white"
+        >
+          <Image src={demandingIcon} alt={`${demandingIcon}`} />
+          <p class="text-[12px] font-manrope text-black font-bold">
+            Best Demanding
+          </p>
+        </div>
+        <Image class="slide-img w-full" src={one} alt={`${one}`} />
+        <div class="absolute overlay inset-0 bg-black bg-opacity-50"></div>
+        <div
+          class="slide-text px-[30px] pb-[21px] items-center flex justify-between bg-white"
+        >
+          <p class="text-[38px] font-anticdidone text-start leading-[44px]">
+            K-ssense <br /> Head rituals
+          </p>
+          <div
+            class="border-[#D9D9D9] h-[52px] w-[81px] transition-all duration-300 shadow-[0_0_0px_0_white] hover:shadow-[0_0_15px_3px_white] bg-white group-hover:bg-black py-[15px] px-[27px] rounded-full border"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="21px"
+              height="21px"
+              viewBox="0 0 24 24"
+              role="img"
+              class="group-hover:stroke-white"
+              aria-labelledby="arrowRightTopIconTitle"
+              stroke="#000000"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              fill="none"
+              color="#000000"
+            >
+              <title id="arrowRightTopIconTitle">Arrow Right Top</title>
+              <path d="M19 13V5h-8"></path>
+              <path stroke-linecap="round" d="M19 5l-1 1"></path>
+              <path d="M18 6L5 19"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="relative">
+        <div
+          class="flex absolute top-[21px] left-[30px] md:left-[20px] lg:left-[26px] gap-[10px] w-fit transition-all duration-300 shadow-[0_0_0px_0_white] hover:shadow-[0_0_15px_3px_white] rounded-full mb-6 p-[10px] group-hover:border-none border-[#D9D9D9] border bg-white"
+        >
+          <Image src={demandingIcon} alt={`${demandingIcon}`} />
+          <p class="text-[12px] font-manrope text-black font-bold">
+            Best Demanding
+          </p>
+        </div>
+        <Image class="w-full" src={two} alt={`${two}`} />
+        <div class="absolute overlay inset-0 bg-black bg-opacity-50"></div>
+      </div>
+      <div class="relative">
+        <div
+          class="flex absolute top-[21px] left-[30px] md:left-[20px] lg:left-[26px] gap-[10px] w-fit transition-all duration-300 shadow-[0_0_0px_0_white] hover:shadow-[0_0_15px_3px_white] rounded-full mb-6 p-[10px] group-hover:border-none border-[#D9D9D9] border bg-white"
+        >
+          <Image src={demandingIcon} alt={`${demandingIcon}`} />
+          <p class="text-[12px] font-manrope text-black font-bold">
+            Best Demanding
+          </p>
+        </div>
+        <Image class="w-full" src={three} alt={`${three}`} />
+        <div class="absolute overlay inset-0 bg-black bg-opacity-50"></div>
+      </div>
+      <div class="relative">
+        <div
+          class="flex absolute top-[21px] left-[30px] md:left-[20px] lg:left-[26px] gap-[10px] w-fit transition-all duration-300 shadow-[0_0_0px_0_white] hover:shadow-[0_0_15px_3px_white] rounded-full mb-6 p-[10px] group-hover:border-none border-[#D9D9D9] border bg-white"
+        >
+          <Image src={demandingIcon} alt={`${demandingIcon}`} />
+          <p class="text-[12px] font-manrope text-black font-bold">
+            Best Demanding
+          </p>
+        </div>
+        <Image class="w-full" src={four} alt={`${four}`} />
+        <div class="absolute overlay inset-0 bg-black bg-opacity-50"></div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <style>
-	.scrollbar-hide {
-		-ms-overflow-style: none;
-		scrollbar-width: none;
-	}
-	.scrollbar-hide::-webkit-scrollbar {
-		display: none;
-	}
+  .slick-center {
+    position: relative;
+  }
+
+  .slick-center::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -9px;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 2px;
+  }
+  .slick-list,
+  .draggable {
+    padding-block: 30px !important;
+  }
 </style>
