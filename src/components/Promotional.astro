@@ -1,30 +1,124 @@
 ---
+import { Image } from "astro:assets";
+import arrow from "../../public/arrow-top-right.svg";
+import curve from "../../public/black-curve.png";
+import promo from "../../public/promo.jpg";
 ---
 
 <section class="py-16 bg-gray-50 relative">
-	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-		<div class="grid md:grid-cols-2 gap-12 items-center">
-			<div>
-				<h2 class="text-5xl md:text-6xl font-bold text-black mb-4">Up to 50% off</h2>
-				<p class="text-2xl md:text-3xl font-serif text-gray-700 mb-8">Redefining Beauty: Hair, Makeup & Nails at Their Best.</p>
-				<button class="bg-black text-white px-8 py-4 flex items-center gap-2 hover:bg-gray-800 transition">
-					<span>Book Now</span>
-					<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-					</svg>
-				</button>
-			</div>
-			<div class="relative">
-				<img src="/promo.jpg" alt="Beauty services" class="rounded-lg shadow-xl" />
-				<div class="absolute top-1/2 right-1/4 w-32 h-32 border-4 border-yellow-500 rounded-full opacity-50"></div>
-			</div>
-		</div>
-	</div>
-
-	<!-- Floating chat icon -->
-	<a href="#contact" class="fixed bottom-8 right-8 z-[9999] bg-black rounded-full p-4 shadow-lg hover:bg-gray-800 transition">
-		<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-		</svg>
-	</a>
+  <Image class="absolute w-full top-0 z-[999]" src={curve} alt={`${curve}`} />
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 mt-[134px] mb-[127px] bg-white gap-12 items-center"
+    >
+      <div class="px-[25px] pt-[34px] pb-[52px]">
+        <div
+          class="flex gap-[17px] mb-[20px] md:mb:[50px] lg:mb-[72px] items-center justify-start"
+        >
+          <div class="w-[33px] h-[10px] rounded-full bg-black"></div>
+          <p class="font-bold">Promo advertisment</p>
+        </div>
+        <h2
+          class="text-[35px] md:text-[40px] font-anticdidone leading-[64px] -tracking-tighter-[5%] text-black mb-[20px] md:mb-[26px] lg:mb-[46px]"
+        >
+          Up to 50% off
+        </h2>
+        <p
+          class="font-manrope text-[34px] md:text-[24px] leading-[44px] md:leading-[33px] w-[250px] lg:w-[500px] text-gray-700 mb-[30px] md:mb-[70px] lg:mb-[105px]"
+        >
+          Redefining Beauty: Hair, <br /> Makeup & Nails at Their Best.
+        </p>
+        <button
+          class="bg-black rounded-full flex items-center gap-3 text-[14px] text-white
+          pl-6 pr-[6px] py-[4px]"
+        >
+          Book now
+          <Image
+            class="bg-white w-fit rounded-full py-[11px] px-[21px]"
+            src={arrow}
+            alt={`${arrow}`}
+          />
+        </button>
+      </div>
+      <div class="relative">
+        <Image class="w-full" src={promo} alt={`${promo}`} />
+        <div
+          class="absolute flex gap-[17px] items-center bg-white right-3 bottom-[13px] rounded-full pl-[30px] pr-[10px] py-[10px]"
+        >
+          <div class="text-end">
+            <p
+              class="font-manrope text-[10px] sm:text-[16px] md:text-[10px] lg:text-[18px]"
+            >
+              Free mackup for first time customer.
+            </p>
+            <p
+              class="font-manrope text-[10px] sm:text-[16px] md:text-[10px] lg:text-[18px] font-medium"
+            >
+              Use code Feminaplusfirst
+            </p>
+          </div>
+          <div
+            class="bg-black rounded-full flex justify-center items-center md:p-[10px] lg:p-[17px]"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="36"
+              height="36"
+              viewBox="0 0 36 36"
+              fill="none"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M30.5608 27.5512V24.3304C30.5608 23.5329 30.8776 22.768 31.4416 22.204L33.7192 19.9264C34.8935 18.7521 34.8935 16.8479 33.7192 15.6736L31.4416 13.396C30.8776 12.832 30.5608 12.0671 30.5608 11.2696V8.04638C30.5608 6.38555 29.2144 5.03918 27.5536 5.03918H24.3304C23.5329 5.03918 22.768 4.72233 22.204 4.15838L19.9264 1.88078C18.7521 0.706408 16.8479 0.706408 15.6736 1.88078L13.396 4.15838C12.832 4.72233 12.0671 5.03918 11.2696 5.03918H8.04638C7.2484 5.03918 6.48314 5.35634 5.91911 5.92082C5.35509 6.4853 5.03855 7.2508 5.03918 8.04878V11.2696C5.03918 12.0671 4.72233 12.832 4.15838 13.396L1.88078 15.6736C0.706408 16.8479 0.706408 18.7521 1.88078 19.9264L4.15838 22.204C4.72233 22.768 5.03918 23.5329 5.03918 24.3304V27.5512C5.03918 29.212 6.38555 30.5584 8.04638 30.5584H11.2696C12.0671 30.5584 12.832 30.8752 13.396 31.4392L15.6736 33.7168C16.8479 34.8911 18.7521 34.8911 19.9264 33.7168L22.204 31.4392C22.768 30.8752 23.5329 30.5584 24.3304 30.5584H27.5512C28.3492 30.5591 29.1146 30.2426 29.679 29.6783C30.2435 29.1143 30.5608 28.3492 30.5608 27.5512Z"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M11.2772 14.5385C10.6176 13.879 10.4202 12.887 10.7772 12.0251C11.1342 11.1633 11.9751 10.6013 12.908 10.6013C13.8409 10.6013 14.6818 11.1633 15.039 12.0251C15.3958 12.887 15.1986 13.879 14.5388 14.5385C13.6381 15.4393 12.1779 15.4393 11.2772 14.5385Z"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M21.0624 24.3232C20.4027 23.6634 20.2054 22.6715 20.5623 21.8097C20.9194 20.9476 21.7604 20.3857 22.6932 20.3857C23.6261 20.3857 24.4671 20.9476 24.824 21.8097C25.1811 22.6715 24.9836 23.6634 24.324 24.3232C23.4233 25.2237 21.9632 25.2237 21.0624 24.3232Z"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"></path>
+              <path
+                d="M24.3242 11.2744L11.2754 24.3256"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
+
+<!-- Floating chat icon -->
+<a
+  href="#contact"
+  class="fixed bottom-8 right-8 z-[9999] bg-black rounded-full p-4 shadow-lg hover:bg-gray-800 transition"
+>
+  <svg
+    class="w-6 h-6 text-white"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"
+  >
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+    ></path>
+  </svg>
+</a>

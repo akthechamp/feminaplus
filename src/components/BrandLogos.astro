@@ -1,22 +1,46 @@
 ---
+import loreal from "../../public/loreal.png";
+import kérastase from "../../public/kerastase.png";
+import olaplex from "../../public/olaplex.png";
+import swati from "../../public/swati.png";
+import gk from "../../public/gk.png";
+import ft from "../../public/ft.jpg";
+import Moroccanoil from "../../public/mr.jpg";
+import Dermalogica from "../../public/Dermalogica.png";
+import { Image } from "astro:assets";
+
 const brands = [
-	{ name: "L'Oréal" },
-	{ name: 'Kérastase' },
-	{ name: 'Olaplex' },
-	{ name: 'Moroccanoil' },
-	{ name: 'Dermalogica' },
-	{ name: 'SWATI' }
+  loreal,
+  kérastase,
+  olaplex,
+  Moroccanoil,
+  Dermalogica,
+  swati,
+  ft,
+  gk,
+  kérastase,
+  olaplex,
+  swati,
+  Moroccanoil,
 ];
 ---
 
-<section class="py-12 bg-white">
-	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-		<div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
-			{brands.map((brand) => (
-				<div class="text-gray-400 text-xl font-light hover:text-gray-600 transition">
-					{brand.name}
-				</div>
-			))}
-		</div>
-	</div>
+<section class="bg-white">
+  <div class="">
+    <div
+      class="max-w-[1404px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 items-center gap-0"
+    >
+      {
+        brands.map((brand) => (
+          <div class="border border-[#F6F6F6] py-[42px] px-[49px] w-full h-[181px] flex items-center justify-center">
+            <Image
+              src={brand}
+              alt={`${brand}`}
+              class="object-contain w-full h-full"
+            />
+          </div>
+        ))
+      }
+    </div>
+  </div>
 </section>

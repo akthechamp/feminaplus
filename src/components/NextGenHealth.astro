@@ -36,9 +36,7 @@ import four from "../../public/slider-image-four.png";
           <div class="h-[10px] w-[33px] rounded-full bg-white"></div>
           <p>Our services</p>
         </div>
-        <h2
-          class="text-[50px] md:text-[54px] leading-[64px] font-anticdidone mb-6"
-        >
+        <h2 class="text-[50px] md:text-[54px] leading-[64px] font-anticdidone">
           Next Gen Health <br /> Solutions by Femina Plus
         </h2>
       </div>
@@ -59,13 +57,117 @@ import four from "../../public/slider-image-four.png";
             Best Demanding
           </p>
         </div>
-        <Image class="slide-img w-full" src={one} alt={`${one}`} />
+        <Image
+          class="slide-img w-full object-cover h-full"
+          src={one}
+          alt={`${one}`}
+        />
         <div class="absolute overlay inset-0 bg-black bg-opacity-50"></div>
         <div
-          class="slide-text px-[30px] pb-[21px] items-center flex justify-between bg-white"
+          class="content-slider flex-col md:flex-row gap-[7px] slide-text absolute bottom-[4px] lg:bottom-[20px] w-full px-[20px] items-center flex justify-between bg-white"
         >
-          <p class="text-[38px] font-anticdidone text-start leading-[44px]">
+          <p
+            class="text-[24px] md:text-[24px] lg:text-[38px] font-anticdidone text-start leading-[30px] md:leading-[30px] lg:leading-[44px]"
+          >
             K-ssense <br /> Head rituals
+          </p>
+          <div
+            class="border-[#D9D9D9] h-[40px] w-[70px] md:h-[52px] md:w-[81px] transition-all duration-300 shadow-[0_0_0px_0_white] hover:shadow-[0_0_15px_3px_white] bg-white group-hover:bg-black py-[10px] px-[22px] md:py-[15px] md:px-[27px] rounded-full border"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="21px"
+              height="21px"
+              viewBox="0 0 24 24"
+              role="img"
+              class="group-hover:stroke-white"
+              aria-labelledby="arrowRightTopIconTitle"
+              stroke="#000000"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              fill="none"
+              color="#000000"
+            >
+              <title id="arrowRightTopIconTitle">Arrow Right Top</title>
+              <path d="M19 13V5h-8"></path>
+              <path stroke-linecap="round" d="M19 5l-1 1"></path>
+              <path d="M18 6L5 19"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="relative slide-item">
+        <div
+          class="flex absolute top-[21px] left-[30px] md:left-[20px] lg:left-[26px] gap-[10px] w-fit transition-all duration-300 shadow-[0_0_0px_0_white] hover:shadow-[0_0_15px_3px_white] rounded-full mb-6 p-[10px] group-hover:border-none border-[#D9D9D9] border bg-white"
+        >
+          <Image src={demandingIcon} alt={`${demandingIcon}`} />
+          <p class="text-[12px] font-manrope text-black font-bold">
+            Best Demanding
+          </p>
+        </div>
+        <Image
+          class="slide-img w-full object-cover h-full"
+          src={two}
+          alt={`${two}`}
+        />
+        <div class="absolute overlay inset-0 bg-black bg-opacity-50"></div>
+        <div
+          class="content-slider flex-col md:flex-row gap-[7px] slide-text absolute bottom-[4px] lg:bottom-[20px] w-full px-[20px] items-center flex justify-between bg-white"
+        >
+          <p
+            class="text-[24px] md:text-[24px] lg:text-[38px] font-anticdidone text-start leading-[30px] md:leading-[30px] lg:leading-[44px]"
+          >
+            Facial Care
+          </p>
+          <div
+            class="border-[#D9D9D9] h-[40px] w-[70px] md:h-[52px] md:w-[81px] transition-all duration-300 shadow-[0_0_0px_0_white] hover:shadow-[0_0_15px_3px_white] bg-white group-hover:bg-black py-[10px] px-[22px] md:py-[15px] md:px-[27px] rounded-full border"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="21px"
+              height="21px"
+              viewBox="0 0 24 24"
+              role="img"
+              class="group-hover:stroke-white"
+              aria-labelledby="arrowRightTopIconTitle"
+              stroke="#000000"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              fill="none"
+              color="#000000"
+            >
+              <title id="arrowRightTopIconTitle">Arrow Right Top</title>
+              <path d="M19 13V5h-8"></path>
+              <path stroke-linecap="round" d="M19 5l-1 1"></path>
+              <path d="M18 6L5 19"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="relative slide-item">
+        <div
+          class="flex absolute top-[21px] left-[30px] md:left-[20px] lg:left-[26px] gap-[10px] w-fit transition-all duration-300 shadow-[0_0_0px_0_white] hover:shadow-[0_0_15px_3px_white] rounded-full mb-6 p-[10px] group-hover:border-none border-[#D9D9D9] border bg-white"
+        >
+          <Image src={demandingIcon} alt={`${demandingIcon}`} />
+          <p class="text-[12px] font-manrope text-black font-bold">
+            Best Demanding
+          </p>
+        </div>
+        <Image
+          class="slide-img w-full object-cover h-full"
+          src={three}
+          alt={`${three}`}
+        />
+        <div class="absolute overlay inset-0 bg-black bg-opacity-50"></div>
+        <div
+          class="content-slider flex-col md:flex-row gap-[7px] slide-text absolute bottom-[4px] lg:bottom-[20px] w-full px-[20px] items-center flex justify-between bg-white"
+        >
+          <p
+            class="text-[24px] md:text-[24px] lg:text-[38px] font-anticdidone text-start leading-[30px] md:leading-[30px] lg:leading-[44px]"
+          >
+            Hair Treatment
           </p>
           <div
             class="border-[#D9D9D9] h-[52px] w-[81px] transition-all duration-300 shadow-[0_0_0px_0_white] hover:shadow-[0_0_15px_3px_white] bg-white group-hover:bg-black py-[15px] px-[27px] rounded-full border"
@@ -93,7 +195,7 @@ import four from "../../public/slider-image-four.png";
           </div>
         </div>
       </div>
-      <div class="relative">
+      <div class="relative slide-item">
         <div
           class="flex absolute top-[21px] left-[30px] md:left-[20px] lg:left-[26px] gap-[10px] w-fit transition-all duration-300 shadow-[0_0_0px_0_white] hover:shadow-[0_0_15px_3px_white] rounded-full mb-6 p-[10px] group-hover:border-none border-[#D9D9D9] border bg-white"
         >
@@ -102,55 +204,114 @@ import four from "../../public/slider-image-four.png";
             Best Demanding
           </p>
         </div>
-        <Image class="w-full" src={two} alt={`${two}`} />
+        <Image
+          class="slide-img w-full object-cover h-full"
+          src={four}
+          alt={`${four}`}
+        />
         <div class="absolute overlay inset-0 bg-black bg-opacity-50"></div>
-      </div>
-      <div class="relative">
         <div
-          class="flex absolute top-[21px] left-[30px] md:left-[20px] lg:left-[26px] gap-[10px] w-fit transition-all duration-300 shadow-[0_0_0px_0_white] hover:shadow-[0_0_15px_3px_white] rounded-full mb-6 p-[10px] group-hover:border-none border-[#D9D9D9] border bg-white"
+          class="content-slider flex-col md:flex-row gap-[7px] slide-text absolute bottom-[4px] lg:bottom-[20px] w-full px-[20px] items-center flex justify-between bg-white"
         >
-          <Image src={demandingIcon} alt={`${demandingIcon}`} />
-          <p class="text-[12px] font-manrope text-black font-bold">
-            Best Demanding
+          <p
+            class="text-[24px] md:text-[24px] lg:text-[38px] font-anticdidone text-start leading-[30px] md:leading-[30px] lg:leading-[44px]"
+          >
+            Hair Treatment
           </p>
+          <div
+            class="border-[#D9D9D9] h-[52px] w-[81px] transition-all duration-300 shadow-[0_0_0px_0_white] hover:shadow-[0_0_15px_3px_white] bg-white group-hover:bg-black py-[15px] px-[27px] rounded-full border"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="21px"
+              height="21px"
+              viewBox="0 0 24 24"
+              role="img"
+              class="group-hover:stroke-white"
+              aria-labelledby="arrowRightTopIconTitle"
+              stroke="#000000"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              fill="none"
+              color="#000000"
+            >
+              <title id="arrowRightTopIconTitle">Arrow Right Top</title>
+              <path d="M19 13V5h-8"></path>
+              <path stroke-linecap="round" d="M19 5l-1 1"></path>
+              <path d="M18 6L5 19"></path>
+            </svg>
+          </div>
         </div>
-        <Image class="w-full" src={three} alt={`${three}`} />
-        <div class="absolute overlay inset-0 bg-black bg-opacity-50"></div>
-      </div>
-      <div class="relative">
-        <div
-          class="flex absolute top-[21px] left-[30px] md:left-[20px] lg:left-[26px] gap-[10px] w-fit transition-all duration-300 shadow-[0_0_0px_0_white] hover:shadow-[0_0_15px_3px_white] rounded-full mb-6 p-[10px] group-hover:border-none border-[#D9D9D9] border bg-white"
-        >
-          <Image src={demandingIcon} alt={`${demandingIcon}`} />
-          <p class="text-[12px] font-manrope text-black font-bold">
-            Best Demanding
-          </p>
-        </div>
-        <Image class="w-full" src={four} alt={`${four}`} />
-        <div class="absolute overlay inset-0 bg-black bg-opacity-50"></div>
       </div>
     </div>
   </div>
 </section>
 
 <style>
-  .slick-center {
+  .slick-slide.slick-active {
     position: relative;
   }
-
-  .slick-center::after {
+  .slick-slide.slick-active::after {
     content: "";
     position: absolute;
     left: 50%;
     bottom: -9px;
-    transform: translateX(-50%);
-    width: 100%;
+    transform: translateX(50%);
+    width: 0;
     height: 3px;
     background: #fff;
     border-radius: 2px;
+    opacity: 0;
   }
+
+  .slick-slide.slick-active::after {
+    width: 100%;
+    opacity: 1;
+  }
+
   .slick-list,
   .draggable {
     padding-block: 30px !important;
   }
+
+  .slick-active {
+    height: 535px;
+  }
 </style>
+<script is:inline>
+  $(".slider").slick({
+    centerMode: true,
+    slidesToScroll: 1,
+    autoplay: true,
+    prevArrow:
+      '<button class="slick-prev slick-arrow"><span class="customArrow">←</span></button>',
+    nextArrow:
+      '<button class="slick-next slick-arrow"><span class="customArrow">→</span></button>',
+    autoplaySpeed: 3000,
+    loop: true,
+    dots: true,
+    centerPadding: "0px",
+    slidesToShow: 3,
+    responsive: [
+      {
+        breakpoint: 1110,
+        settings: {
+          arrows: true,
+          centerMode: true,
+          // centerPadding: "40px",
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 590,
+        settings: {
+          arrows: true,
+          centerMode: true,
+          // centerPadding: "40px",
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
+</script>

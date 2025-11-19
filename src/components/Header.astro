@@ -4,7 +4,7 @@ import close from "../../public/close.svg";
 import { Image } from "astro:assets";
 ---
 
-<header class="w-full absolute top-0 left-0 z-50">
+<header class="w-full absolute top-0 left-0 z-[9999999]">
   <!-- Top bar with phone number -->
   <div class="bg-black text-white py-2 px-4">
     <p class="text-sm text-center py-4">
@@ -30,109 +30,76 @@ import { Image } from "astro:assets";
         </div>
 
         <!-- Navigation links -->
-        <div class="hidden main-navbar lg:flex items-center gap-9">
-          <a
-            href="#about"
-            class="relative text-white hover:text-gray-300 transition
-           after:content-[''] after:absolute after:left-0 after:-bottom-1
-           after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300
-           hover:after:w-full"
-          >
-            About
-          </a>
+        <div class="main-navbar">
+          <div class="navigation">
+            <button class="w-6 h-6 !block md:hidden menu-close"
+              ><Image src={close} alt={`${close}`} /></button
+            >
+            <div class="nav lg:flex items-center gap-9">
+              <a
+                href="#about"
+                class="relative text-white hover:text-gray-300 transition
+              after:content-[''] after:absolute after:left-0 after:-bottom-1
+              after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300
+              hover:after:w-full"
+              >
+                About
+              </a>
 
-          <a
-            href="#locations"
-            class="relative text-white hover:text-gray-300 transition
-           after:content-[''] after:absolute after:left-0 after:-bottom-1
-           after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300
-           hover:after:w-full"
-          >
-            Locations
-          </a>
+              <a
+                href="#locations"
+                class="relative text-white hover:text-gray-300 transition
+              after:content-[''] after:absolute after:left-0 after:-bottom-1
+              after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300
+              hover:after:w-full"
+                >Locations</a
+              >
 
-          <a
-            href="#services"
-            class="relative text-white hover:text-gray-300 transition
-           after:content-[''] after:absolute after:left-0 after:-bottom-1
-           after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300
-           hover:after:w-full"
-          >
-            Services
-          </a>
+              <a
+                href="#services"
+                class="relative text-white hover:text-gray-300 transition
+              after:content-[''] after:absolute after:left-0 after:-bottom-1
+              after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300
+              hover:after:w-full"
+                >Services</a
+              >
 
-          <a
-            href="#blog"
-            class="relative text-white hover:text-gray-300 transition
-           after:content-[''] after:absolute after:left-0 after:-bottom-1
-           after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300
-           hover:after:w-full"
-          >
-            Testimonials
-          </a>
+              <a
+                href="#blog"
+                class="relative text-white hover:text-gray-300 transition
+              after:content-[''] after:absolute after:left-0 after:-bottom-1
+              after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300
+              hover:after:w-full"
+                >Testimonials</a
+              >
 
-          <a
-            href="#media"
-            class="relative text-white hover:text-gray-300 transition
-           after:content-[''] after:absolute after:left-0 after:-bottom-1
-           after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300
-           hover:after:w-full"
-          >
-            Media
-          </a>
-        </div>
-
-        <!-- Mobile Responsive -->
-        <div class="hidden menu-bar fixed items-center gap-9">
-          <a
-            href="#about"
-            class="relative text-white hover:text-gray-300 transition
-           after:content-[''] after:absolute after:left-0 after:-bottom-1
-           after:w-0 after:h-[2px] after:bg-black after:transition-all after:duration-300
-           hover:after:w-full"
-          >
-            About
-          </a>
-
-          <a
-            href="#locations"
-            class="relative text-white hover:text-gray-300 transition
-           after:content-[''] after:absolute after:left-0 after:-bottom-1
-           after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300
-           hover:after:w-full"
-          >
-            Locations
-          </a>
-
-          <a
-            href="#services"
-            class="relative text-white hover:text-gray-300 transition
-           after:content-[''] after:absolute after:left-0 after:-bottom-1
-           after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300
-           hover:after:w-full"
-          >
-            Services
-          </a>
-
-          <a
-            href="#blog"
-            class="relative text-white hover:text-gray-300 transition
-           after:content-[''] after:absolute after:left-0 after:-bottom-1
-           after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300
-           hover:after:w-full"
-          >
-            Testimonials
-          </a>
-
-          <a
-            href="#media"
-            class="relative text-white hover:text-gray-300 transition-colors
-         after:content-[''] after:absolute after:left-0 after:-bottom-1
-         after:h-[2px] after:bg-white after:w-0 after:transition-all after:duration-300
-         hover:after:w-full"
-          >
-            Media
-          </a>
+              <a
+                href="#media"
+                class="relative text-white hover:text-gray-300 transition
+              after:content-[''] after:absolute after:left-0 after:-bottom-1
+              after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300
+              hover:after:w-full"
+                >Media</a
+              >
+            </div>
+          </div>
+          <!-- Mobile Toggle Button -->
+          <div class="moile-menu lg:hidden">
+            <button class="menu-click text-white">
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+          </div>
         </div>
         <!-- Book Appointment Button -->
         <button
@@ -147,31 +114,48 @@ import { Image } from "astro:assets";
             src={arrow}
             alt={`${arrow}`}
           />
-
-          <!-- Mobile menu button -->
-          <div>
-            <button class="lg:hidden menu-click text-white">
-              <svg
-                class="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h16M4 18h16"></path>
-              </svg>
-            </button>
-            <button class="hidden w-6 h-6 menu-close"
-              ><Image src={close} alt={`${close}`} /></button
-            >
-          </div>
-
-          <div></div>
         </button>
       </div>
     </div>
   </nav>
 </header>
+
+<style>
+  @media (max-width: 1023px) {
+    .navigation {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 99999999;
+      top: 0;
+      left: 0;
+      background-color: rgb(0, 0, 0);
+      overflow-x: hidden;
+      transition: 0.5s;
+    }
+
+    .navigation .nav {
+      position: relative;
+      top: 25%;
+      width: 100%;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .navigation .nav a {
+      padding: 8px;
+      text-decoration: none;
+      font-size: 20px;
+      color: #ffffff;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .menu-close {
+      position: absolute;
+      top: 40px;
+      right: 20px;
+      filter: invert(1);
+    }
+  }
+</style>

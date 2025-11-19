@@ -1,144 +1,343 @@
 ---
-const locations = [
+const solutions = [
   {
-    name: "FP44",
-    address: "SCO 268, Sector 44, CHD",
-    phone: "0172 46228844",
-    whatsapp: "+91 8725055006",
-    image: "/fp44.jpg",
+    title: "K-essence Head rituals",
   },
   {
-    name: "FP Luxe",
-    address: "SCO 164-165, Sector 9-C, CHD",
-    phone: "0172 4024040",
-    whatsapp: "+91 7973268966",
-    image: "/fp-luxe.jpg",
+    title: "Hair Treatment",
   },
   {
-    name: "FP Kharar",
-    address: "SCO 55, Sector 125, New Sunny Enclave",
-    phone: "+91 9815931884",
-    wwhatsapp: "",
-    image: "/fp-kharar.jpg",
-  },
-  {
-    name: "FP PKL",
-    address: "SCO 386, Sector 8, Panchkula",
-    phone: "0172 40225050",
-    wwhatsapp: "+91 9815962884",
-    image: "/fp-pkl.jpg",
+    title: "Facial Care",
   },
 ];
+import { Image } from "astro:assets";
+import two from "../../public/slider-image-two.png";
+import showroomOne from "../../public/showroom-image-1.jpg";
+import showroomTwo from "../../public/showroom-image-2.jpg";
+import showroomThree from "../../public/showroom-image-3.jpg";
+import showroomFour from "../../public/showroom-image-4.jpg";
 ---
 
-<section id="locations" class="py-16 bg-white">
+<section class="py-16 bg-white text-black">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid md:grid-cols-2 gap-12 mb-12">
-      <div>
-        <h2 class="text-5xl md:text-6xl font-serif text-black mb-6">
-          Discover Our Convenient Nearby Locations
+    <div class="relative md:grid md:grid-cols-10 gap-12 pb-20">
+      <div
+        class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10 z-0"
+        style="background-image: url('/gen-health-bg.svg');"
+      >
+      </div>
+
+      <div class="relative z-10 md:col-span-7">
+        <div class="flex gap-[17px] items-center mb-[20px]">
+          <div class="h-[10px] w-[33px] rounded-full bg-black"></div>
+          <p>Location area</p>
+        </div>
+        <h2 class="text-[50px] md:text-[54px] leading-[64px] font-anticdidone">
+          Discover Our Convenient <br />
+          Nearby Locations
         </h2>
       </div>
-      <div class="flex items-center">
-        <p class="text-lg text-gray-700">
-          Visit us at any of our conveniently located branches. Each location
-          offers the same exceptional service and quality you expect from Femina
-          Plus.
+
+      <div class="relative z-10 flex items-center col-span-3">
+        <p class="text-[18px] font-manrope text-black">
+          Look effortlessly radiant with easy to apply products that save time
+          and feel like you
         </p>
       </div>
     </div>
 
-    <!-- Location cards carousel -->
-    <div class="overflow-x-auto scrollbar-hide">
-      <div class="flex gap-6 pb-4">
-        {
-          locations.map((location) => (
-            <div class="flex-shrink-0 w-80">
-              <div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition">
-                <img
-                  src={location.image}
-                  alt={location.name}
-                  class="w-full h-48 object-cover"
-                />
-                <div class="p-6">
-                  <h3 class="text-2xl font-semibold text-black mb-3">
-                    {location.name}
-                  </h3>
-                  <div class="space-y-2 mb-4">
-                    <div class="flex items-start gap-2 text-gray-600">
-                      <svg
-                        class="w-5 h-5 mt-0.5 flex-shrink-0"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                        />
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                        />
-                      </svg>
-                      <span>{location.address}</span>
-                    </div>
-                    <div class="flex items-center gap-2 text-gray-600">
-                      <svg
-                        class="w-5 h-5"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                        />
-                      </svg>
-                      <span>{location.phone}</span>
-                    </div>
-                    <div class="flex items-center gap-2 text-gray-600">
-                      <svg
-                        class="w-5 h-5"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"
-                        />
-                      </svg>
-                      <span>{location.whatsapp}</span>
-                    </div>
-                  </div>
-                  <button class="w-full bg-black text-white py-2 hover:bg-gray-800 transition">
-                    Directions
-                  </button>
-                </div>
+    <div class="location-slider">
+      <div
+        class="relative main-inner group after:bg-black after:absolute after:h-1 after:w-0 after:-bottom-[12px] lg:after:-bottom-[15px] after:left-0 hover:after:w-full after:transition-all after:duration-300"
+      >
+        <div
+          class="relative inner transition-all duration-[400ms] ease-in-out
+  group-hover:rounded-none"
+        >
+          <Image
+            class=`max-w-[229px] w-full h-[347px] mx-auto object-cover
+      grayscale rounded-[147px]
+      transition-all duration-[400ms] ease-in-out
+      group-hover:max-w-full
+      group-hover:grayscale-0
+      group-hover:rounded-none `
+            src={showroomOne}
+            alt={`${showroomOne}`}
+          />
+        </div>
+
+        <div class="group-hover:bg-black bg-white px-4 pt-[80px] pb-[37px">
+          <p
+            class="text-[32px] leading-[44px] group-hover:text-white text-black font-anticdidone"
+          >
+            FP44
+          </p>
+          <div
+            class="bg-white group-hover:bg-black flex justify-between text-white group-hover:text-black"
+          >
+            <p
+              class="group-hover:text-white text-black text-[16px] font-manrope w-[180px]"
+            >
+              SCO 268, SECTOR 44-C, CHD. - 0172 46228844, 8725055006
+            </p>
+            <div class="flex justify-center gap-2 flex-col">
+              <div
+                class="border border-white w-[81px] h-[52px] rounded-[40px] flex items-center justify-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="21"
+                  height="21"
+                  viewBox="0 0 21 21"
+                  fill="none"
+                >
+                  <path
+                    d="M17.8307 1.06062L1.66825 6.74505C0.756293 7.06579 0.784963 8.36527 1.71018 8.64548L8.82955 10.8016C9.14865 10.8982 9.39859 11.1475 9.49603 11.4664L11.6259 18.4359C11.9089 19.3618 13.211 19.3854 13.5274 18.4705L19.1076 2.33074C19.381 1.53988 18.6201 0.782985 17.8307 1.06062Z"
+                    stroke="white"
+                    stroke-width="2"></path>
+                </svg>
               </div>
+              <p class="text-black group-hover:text-white text-center">
+                Direction
+              </p>
             </div>
-          ))
-        }
+          </div>
+        </div>
+      </div>
+      <div
+        class="relative main-inner group after:bg-black after:absolute after:h-1 after:w-0 after:-bottom-[12px] lg:after:-bottom-[15px] after:left-0 hover:after:w-full after:transition-all after:duration-300"
+      >
+        <div
+          class="relative inner transition-all duration-[400ms] ease-in-out
+  group-hover:rounded-none"
+        >
+          <Image
+            class=`max-w-[229px] w-full h-[347px] mx-auto object-cover
+      grayscale rounded-[147px]
+      transition-all duration-[400ms] ease-in-out
+      group-hover:max-w-full
+      group-hover:grayscale-0
+      group-hover:rounded-none `
+            src={showroomOne}
+            alt={`${showroomOne}`}
+          />
+        </div>
+
+        <div class="group-hover:bg-black bg-white px-4 pt-[80px] pb-[37px">
+          <p
+            class="text-[32px] leading-[44px] group-hover:text-white text-black font-anticdidone"
+          >
+            FP44
+          </p>
+          <div
+            class="bg-white group-hover:bg-black flex justify-between text-white group-hover:text-black"
+          >
+            <p
+              class="group-hover:text-white text-black text-[16px] font-manrope w-[180px]"
+            >
+              SCO 268, SECTOR 44-C, CHD. - 0172 46228844, 8725055006
+            </p>
+            <div class="flex justify-center gap-2 flex-col">
+              <div
+                class="border border-white w-[81px] h-[52px] rounded-[40px] flex items-center justify-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="21"
+                  height="21"
+                  viewBox="0 0 21 21"
+                  fill="none"
+                >
+                  <path
+                    d="M17.8307 1.06062L1.66825 6.74505C0.756293 7.06579 0.784963 8.36527 1.71018 8.64548L8.82955 10.8016C9.14865 10.8982 9.39859 11.1475 9.49603 11.4664L11.6259 18.4359C11.9089 19.3618 13.211 19.3854 13.5274 18.4705L19.1076 2.33074C19.381 1.53988 18.6201 0.782985 17.8307 1.06062Z"
+                    stroke="white"
+                    stroke-width="2"></path>
+                </svg>
+              </div>
+              <p class="text-black group-hover:text-white text-center">
+                Direction
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="relative main-inner group after:bg-black after:absolute after:h-1 after:w-0 after:-bottom-[12px] lg:after:-bottom-[15px] after:left-0 hover:after:w-full after:transition-all after:duration-300"
+      >
+        <div
+          class="relative inner transition-all duration-[400ms] ease-in-out
+  group-hover:rounded-none"
+        >
+          <Image
+            class=`max-w-[229px] w-full h-[347px] mx-auto object-cover
+      grayscale rounded-[147px]
+      transition-all duration-[400ms] ease-in-out
+      group-hover:max-w-full
+      group-hover:grayscale-0
+      group-hover:rounded-none `
+            src={showroomOne}
+            alt={`${showroomOne}`}
+          />
+        </div>
+
+        <div class="group-hover:bg-black bg-white px-4 pt-[80px] pb-[37px">
+          <p
+            class="text-[32px] leading-[44px] group-hover:text-white text-black font-anticdidone"
+          >
+            FP44
+          </p>
+          <div
+            class="bg-white group-hover:bg-black flex justify-between text-white group-hover:text-black"
+          >
+            <p
+              class="group-hover:text-white text-black text-[16px] font-manrope w-[180px]"
+            >
+              SCO 268, SECTOR 44-C, CHD. - 0172 46228844, 8725055006
+            </p>
+            <div class="flex justify-center gap-2 flex-col">
+              <div
+                class="border border-white w-[81px] h-[52px] rounded-[40px] flex items-center justify-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="21"
+                  height="21"
+                  viewBox="0 0 21 21"
+                  fill="none"
+                >
+                  <path
+                    d="M17.8307 1.06062L1.66825 6.74505C0.756293 7.06579 0.784963 8.36527 1.71018 8.64548L8.82955 10.8016C9.14865 10.8982 9.39859 11.1475 9.49603 11.4664L11.6259 18.4359C11.9089 19.3618 13.211 19.3854 13.5274 18.4705L19.1076 2.33074C19.381 1.53988 18.6201 0.782985 17.8307 1.06062Z"
+                    stroke="white"
+                    stroke-width="2"></path>
+                </svg>
+              </div>
+              <p class="text-black group-hover:text-white text-center">
+                Direction
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="relative main-inner group after:bg-black after:absolute after:h-1 after:w-0 after:-bottom-[12px] lg:after:-bottom-[15px] after:left-0 hover:after:w-full after:transition-all after:duration-300"
+      >
+        <div
+          class="relative inner transition-all duration-[400ms] ease-in-out
+  group-hover:rounded-none"
+        >
+          <Image
+            class=`max-w-[229px] w-full h-[347px] mx-auto object-cover
+      grayscale rounded-[147px]
+      transition-all duration-[400ms] ease-in-out
+      group-hover:max-w-full
+      group-hover:grayscale-0
+      group-hover:rounded-none `
+            src={showroomOne}
+            alt={`${showroomOne}`}
+          />
+        </div>
+
+        <div class="group-hover:bg-black bg-white px-4 pt-[80px] pb-[37px">
+          <p
+            class="text-[32px] leading-[44px] group-hover:text-white text-black font-anticdidone"
+          >
+            FP44
+          </p>
+          <div
+            class="bg-white group-hover:bg-black flex justify-between text-white group-hover:text-black"
+          >
+            <p
+              class="group-hover:text-white text-black text-[16px] font-manrope w-[180px]"
+            >
+              SCO 268, SECTOR 44-C, CHD. - 0172 46228844, 8725055006
+            </p>
+            <div class="flex justify-center gap-2 flex-col">
+              <div
+                class="border border-white w-[81px] h-[52px] rounded-[40px] flex items-center justify-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="21"
+                  height="21"
+                  viewBox="0 0 21 21"
+                  fill="none"
+                >
+                  <path
+                    d="M17.8307 1.06062L1.66825 6.74505C0.756293 7.06579 0.784963 8.36527 1.71018 8.64548L8.82955 10.8016C9.14865 10.8982 9.39859 11.1475 9.49603 11.4664L11.6259 18.4359C11.9089 19.3618 13.211 19.3854 13.5274 18.4705L19.1076 2.33074C19.381 1.53988 18.6201 0.782985 17.8307 1.06062Z"
+                    stroke="white"
+                    stroke-width="2"></path>
+                </svg>
+              </div>
+              <p class="text-black group-hover:text-white text-center">
+                Direction
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <style>
-  .scrollbar-hide {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+  .slick-slide.slick-active {
+    position: relative;
   }
-  .scrollbar-hide::-webkit-scrollbar {
-    display: none;
+  .slick-slide.slick-active::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -9px;
+    transform: translateX(50%);
+    width: 0;
+    height: 3px;
+    background: #fff;
+    border-radius: 2px;
+    opacity: 0;
+  }
+
+  .slick-slide.slick-active::after {
+    width: 100%;
+    opacity: 1;
+  }
+
+  .slick-list,
+  .draggable {
+    padding-block: 30px !important;
+  }
+
+  .slick-slide {
+    overflow: hidden;
+  }
+
+  .slick-arrow{
+    display: none !important;
   }
 </style>
+<script is:inline>
+  $(".location-slider").slick({
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    centerPadding: "0px",
+    slidesToShow: 3,
+    responsive: [
+      {
+        breakpoint: 1110,
+        settings: {
+          arrows: true,
+          // centerPadding: "40px",
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 590,
+        settings: {
+          arrows: true,
+          // centerPadding: "40px",
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
+</script>
