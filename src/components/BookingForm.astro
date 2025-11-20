@@ -1,82 +1,143 @@
 ---
+import { Image } from "astro:assets";
+import arrow from "../../public/arrow-top-right.svg";
 ---
 
-<section id="contact" class="py-16 bg-white">
-	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-		<h2 class="text-5xl md:text-6xl font-serif text-black mb-12 text-center">Schedule Your Beauty Session</h2>
+<section id="contact" class="py-16 bg-[#f6f6f6]">
+  <div
+    class="max-w-7xl bg-white mx-auto px-4 pt-[60px] pb-[53px] sm:px-6 lg:px-8"
+  >
+    <div class="w-full flex justify-center items-center">
+      <h2
+        class="text-[54px] leading-[64px] font-anticdidone w-[677px] text-black mb-12 text-center"
+      >
+        Schedule Your Beauty Session
+      </h2>
+    </div>
+    <div class="">
+      <form class="space-y-6">
+        <div class="grid md:grid-cols-4 gap-[42px]">
+          <div class="flex flex-col gap-[11px]">
+            <label
+              for="firstName"
+              class="block text-sm font-medium text-gray-700">First Name*</label
+            >
+            <input
+              type="text"
+              id="firstName"
+              name="firstName"
+              placeholder="Enter Name"
+              class="w-full px-4 border py-[18px] pl-[21px] pr-[11px] rounded-[10px] border-gray-300 focus:ring-2 focus:ring-black focus:border-transparent"
+            />
+          </div>
+          <div class="flex flex-col gap-[11px]">
+            <label
+              for="lastName"
+              class="block text-sm font-medium text-gray-700">Last Name*</label
+            >
+            <input
+              type="text"
+              id="lastName"
+              name="lastName"
+              placeholder="Enter Name"
+              class="w-full px-4 border py-[18px] pl-[21px] pr-[11px] rounded-[10px] border-gray-300 focus:ring-2 focus:ring-black focus:border-transparent"
+            />
+          </div>
+          <div class="flex flex-col gap-[11px]">
+            <label for="email" class="block text-sm font-medium text-gray-700"
+              >Email Address*</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email Address*"
+              class="w-full px-4 border py-[18px] pl-[21px] pr-[11px] rounded-[10px] border-gray-300 focus:ring-2 focus:ring-black focus:border-transparent"
+            />
+          </div>
 
-		<div class="max-w-4xl mx-auto">
-			<form class="space-y-6">
-				<div class="grid md:grid-cols-2 gap-6">
-					<div>
-						<label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">First Name</label>
-						<input type="text" id="firstName" name="firstName" placeholder="Enter Name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent" />
-					</div>
-					<div>
-						<label for="lastName" class="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
-						<input type="text" id="lastName" name="lastName" placeholder="Enter Name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent" />
-					</div>
-				</div>
+          <div class="flex flex-col gap-[11px]">
+            <label for="number" class="block text-sm font-medium text-gray-700"
+              >Phone Number*</label
+            >
+            <input
+              type="number"
+              id="number"
+              name="number"
+              placeholder="Phone Number*"
+              class="w-full px-4 border py-[18px] pl-[21px] pr-[11px] rounded-[10px] border-gray-300 focus:ring-2 focus:ring-black focus:border-transparent"
+            />
+          </div>
 
-				<div class="grid md:grid-cols-2 gap-6">
-					<div>
-						<label for="service" class="block text-sm font-medium text-gray-700 mb-2">Select Service</label>
-						<select id="service" name="service" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent appearance-none bg-white">
-							<option value="">Select Service</option>
-							<option value="hair">Hair Services</option>
-							<option value="makeup">Makeup</option>
-							<option value="nails">Nails</option>
-							<option value="skin">Skin Care</option>
-							<option value="lashes">Lashes</option>
-						</select>
-					</div>
-					<div>
-						<label for="branch" class="block text-sm font-medium text-gray-700 mb-2">Select Branch</label>
-						<select id="branch" name="branch" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent appearance-none bg-white">
-							<option value="">Select Branch</option>
-							<option value="h11">H-11</option>
-							<option value="f104">F-10/4</option>
-							<option value="f83">F-8/3 KHAZAR</option>
-							<option value="f73">F-7/3</option>
-						</select>
-					</div>
-				</div>
+          <div class="flex flex-col gap-[11px]">
+            <label for="cars">Select Salon*</label>
 
-				<div class="grid md:grid-cols-2 gap-6">
-					<div>
-						<label for="contact" class="block text-sm font-medium text-gray-700 mb-2">Contact No.</label>
-						<input type="tel" id="contact" name="contact" placeholder="Enter Contact Number" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent" />
-					</div>
-					<div>
-						<label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
-						<input type="email" id="email" name="email" placeholder="Enter Email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent" />
-					</div>
-				</div>
+            <select
+              name="cars"
+              id="cars"
+              class="border border-[#D9D9D9] py-[18px] pl-[21px] pr-[11px] rounded-[10px]"
+            >
+              <option value="volvo">Volvo</option>
+              <option value="saab">Saab</option>
+              <option value="mercedes">Mercedes</option>
+              <option value="audi">Audi</option>
+            </select>
+          </div>
+          <div class="flex flex-col gap-[11px]">
+            <label for="cars">Select Service*</label>
 
-				<div>
-					<label for="datetime" class="block text-sm font-medium text-gray-700 mb-2">Appointment Date & Time</label>
-					<input type="datetime-local" id="datetime" name="datetime" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent" />
-				</div>
+            <select
+              name="cars"
+              id="newcar"
+              class="border border-[#D9D9D9] py-[18px] pl-[21px] pr-[11px] rounded-[10px]"
+            >
+              <option value="volvo">Volvo</option>
+              <option value="saab">Saab</option>
+              <option value="mercedes">Mercedes</option>
+              <option value="audi">Audi</option>
+            </select>
+          </div>
 
-				<div class="flex justify-center">
-					<button type="submit" class="bg-black text-white px-12 py-4 flex items-center gap-2 hover:bg-gray-800 transition">
-						<span>Book Appointment</span>
-						<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-						</svg>
-					</button>
-				</div>
-			</form>
-		</div>
-	</div>
+          <div class="flex flex-col gap-[11px] grid-cols-2">
+            <label for="cars">Appointment Date & Time</label>
+
+            <input
+              class="border border-[#D9D9D9] py-[18px] pl-[21px] pr-[11px] rounded-[10px]"
+              type="date"
+            />
+          </div>
+        </div>
+
+        <div class="w-full flex justify-center">
+          <button
+            class="bg-black book-btn rounded-full hidden lg:flex items-center gap-3 text-[14px] text-white
+          pl-6 pr-[6px] py-2 transition-all duration-300
+          shadow-[0_0_0px_0_white]
+          hover:shadow-[0_0_15px_3px_white]"
+          >
+            Book Appointment
+            <Image
+              class="bg-white w-fit rounded-full py-[11px] px-[21px]"
+              src={arrow}
+              alt={`${arrow}`}
+            />
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
 </section>
 
 <style>
-	select {
-		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3E%3C/svg%3E");
-		background-position: right 0.5rem center;
-		background-repeat: no-repeat;
-		background-size: 1.5em 1.5em;
-		padding-right: 2.5rem;
-	}
+  select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3E%3C/svg%3E");
+    background-position: right 0.5rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+    border: 1px solid #d9d9d9 !important;
+    padding-right: 2.5rem;
+  }
 </style>

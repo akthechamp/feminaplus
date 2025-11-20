@@ -13,4 +13,5 @@ $(document).ready(function () {
   $(".slider").on("beforeChange", function () {
     $(".slick-slide::after").css({ width: 0, opacity: 0 });
   });
+  
 });

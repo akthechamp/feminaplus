@@ -1,73 +1,176 @@
 ---
-const testimonials = [
-	{
-		name: 'Shazia Khan',
-		text: 'Amazing service! The staff is professional and the results exceeded my expectations.',
-		image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80'
-	},
-	{
-		name: 'Rukhsana Ahmed',
-		text: 'Best salon experience I\'ve ever had. Highly recommend their hair treatments!',
-		image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80'
-	},
-	{
-		name: 'Ayesha Ali Khan',
-		text: 'The team made me feel so comfortable. Love my new look!',
-		image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&q=80'
-	}
+import curve from "../../public/our-customers-shape.png";
+import customerThree from "../../public/customer-1.png";
+import customerOne from "../../public/customer-2.png";
+import customerTwo from "../../public/customer-3.png";
+
+import four from "../../public/slider-image-four.png";
+
+const solutions = [
+  {
+    name: "Sheela devi",
+    image: customerOne,
+    description: "wedding dressing, Mackup",
+  },
+  {
+    name: "Kareena kapoor",
+    image: customerThree,
+    description: "wedding dressing, Mackup",
+  },
+  {
+    name: "Jasmeet kaur",
+    image: customerTwo,
+    description: "wedding dressing, Mackup",
+  },
+  {
+    name: "Kareena kapoor",
+    image: customerThree,
+    description: "wedding dressing, Mackup",
+  },
 ];
+import { Image } from "astro:assets";
 ---
 
-<section class="py-16 bg-gray-50">
-	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-		<h2 class="text-5xl md:text-6xl font-serif text-black mb-12 text-center">Our Customers Share Their Experience</h2>
+<section class="py-16 relative bg-[#F6F6F6] text-black">
+  <Image class="absolute w-full top-0 z-[999]" src={curve} alt={`${curve}`} />
 
-		<!-- Testimonials carousel -->
-		<div class="relative">
-			<div class="overflow-x-auto scrollbar-hide">
-				<div class="flex gap-6 pb-4" id="testimonials-carousel">
-					{testimonials.map((testimonial) => (
-						<div class="flex-shrink-0 w-80">
-							<div class="bg-white rounded-lg overflow-hidden shadow-lg">
-								<div class="relative">
-									<img src={testimonial.image} alt={testimonial.name} class="w-full h-64 object-cover" />
-									<button class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 hover:bg-opacity-50 transition">
-										<svg class="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 20 20">
-											<path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l11.15-6.222a1.5 1.5 0 000-2.538L6.3 2.84z" />
-										</svg>
-									</button>
-								</div>
-								<div class="p-6">
-									<h3 class="text-xl font-semibold text-black mb-2">{testimonial.name}</h3>
-									<p class="text-gray-600">{testimonial.text}</p>
-								</div>
-							</div>
-						</div>
-					))}
-				</div>
-			</div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="relative md:grid md:grid-cols-10 gap-12 pb-20">
+      <div
+        class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10 z-0"
+        style="background-image: url('/gen-health-bg.svg');"
+      >
+      </div>
 
-			<!-- Navigation arrows -->
-			<button class="absolute right-0 top-1/2 -translate-y-1/2 bg-white rounded-full p-3 shadow-lg hover:bg-gray-100 transition" onclick="document.getElementById('testimonials-carousel').scrollBy({left: 300, behavior: 'smooth'})">
-				<svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-				</svg>
-			</button>
-			<button class="absolute left-0 top-1/2 -translate-y-1/2 bg-white rounded-full p-3 shadow-lg hover:bg-gray-100 transition" onclick="document.getElementById('testimonials-carousel').scrollBy({left: -300, behavior: 'smooth'})">
-				<svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-				</svg>
-			</button>
-		</div>
-	</div>
+      <div class="relative z-10 md:col-span-7 mt-[92px]">
+        <h2 class="text-[50px] md:text-[54px] leading-[64px] font-anticdidone">
+          Discover Our Convenient <br />
+          Nearby Locations
+        </h2>
+      </div>
+    </div>
+    <div class="testimonals">
+      {
+        solutions.map((facility) => (
+          <div class="relative slide-item">
+            <Image
+              class="slide-img w-full object-cover h-full"
+              src={facility.image}
+              alt={`${facility.image}`}
+            />
+            <div class="absolute bottom-[38px] w-full">
+              <div class="w-full flex justify-center items-center pb-[42px]">
+                <div class="w-[81px] h-[52px] bg-white rounded-[50px] flex justify-center items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="35"
+                    height="24"
+                    viewBox="0 0 35 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M24.8333 8.33333L29.5575 5.49885C31.0115 4.62639 31.7386 4.19017 32.3368 4.24594C32.8584 4.29456 33.3343 4.564 33.6443 4.98627C34 5.47055 34 6.31841 34 8.01415V15.9859C34 17.6815 34 18.5294 33.6443 19.0138C33.3343 19.436 32.8584 19.7055 32.3368 19.7541C31.7386 19.8098 31.0115 19.3737 29.5575 18.5012L24.8333 15.6667M6.86667 23H18.9667C21.0202 23 22.047 23 22.8313 22.6003C23.5212 22.2489 24.0822 21.6879 24.4337 20.998C24.8333 20.2137 24.8333 19.1869 24.8333 17.1333V6.86667C24.8333 4.81315 24.8333 3.78637 24.4337 3.00204C24.0822 2.3121 23.5212 1.75117 22.8313 1.39965C22.047 1 21.0202 1 18.9667 1H6.86667C4.81315 1 3.78637 1 3.00204 1.39965C2.3121 1.75117 1.75117 2.3121 1.39965 3.00204C1 3.78637 1 4.81313 1 6.86667V17.1333C1 19.1869 1 20.2137 1.39965 20.998C1.75117 21.6879 2.3121 22.2489 3.00204 22.6003C3.78637 23 4.81313 23 6.86667 23Z"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <p class="font-bold font-manrope text-[22px] text-white">
+                  {facility.name}
+                </p>
+                <p class="text-[18px] font-medium font-manrope text-white">
+                  {facility.description}
+                </p>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
 </section>
 
 <style>
-	.scrollbar-hide {
-		-ms-overflow-style: none;
-		scrollbar-width: none;
-	}
-	.scrollbar-hide::-webkit-scrollbar {
-		display: none;
-	}
+  .testimonals .slick-arrow {
+    color: white !important;
+    background-color: black !important;
+  }
+
+  .testimonals .slide-dots {
+    width: fit-content !;
+  }
+  .testimonals .slick-center .slide-img {
+    height: 100%;
+    width: 100%;
+    border-radius: 0px;
+    margin: 0;
+    margin-top: 0;
+    transition: none;
+  }
+  .slick-slide.slick-active::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -9px;
+    transform: translateX(50%);
+    width: 0;
+    height: 3px;
+    background: black;
+    border-radius: 2px;
+    opacity: 0;
+  }
+
+  .slick-slide.slick-active::after {
+    width: 100%;
+    opacity: 1;
+  }
+
+  .slick-list,
+  .draggable {
+    padding-block: 30px !important;
+  }
+
+  .slick-active {
+    height: 535px;
+  }
 </style>
+<script is:inline>
+  $(".testimonals").slick({
+    centerMode: true,
+    slidesToScroll: 1,
+    autoplay: true,
+    prevArrow:
+      '<button class="slick-prev slick-arrow"><span class="customArrow">←</span></button>',
+    nextArrow:
+      '<button class="slick-next slick-arrow"><span class="customArrow">→</span></button>',
+    autoplaySpeed: 3000,
+    loop: true,
+    dots: true,
+    centerPadding: "0px",
+    slidesToShow: 3,
+    responsive: [
+      {
+        breakpoint: 1110,
+        settings: {
+          arrows: true,
+          centerPadding: "0px",
+          centerMode: true,
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 590,
+        settings: {
+          arrows: true,
+          centerPadding: "0px",
+          centerMode: true,
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
+</script>
